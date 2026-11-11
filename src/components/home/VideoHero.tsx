@@ -6,16 +6,20 @@ import { ArrowRight, ShieldCheck, ChevronDown } from "lucide-react";
 
 const videos = [
   {
+    src: "/videos/khedCrop.mp4",
+    title: "Highway Road",
+  },
+  {
     src: "/videos/herosection_new_part1.mp4",
-    title: "Reel 1",
+    title: "Valley Corridor Reel 1",
   },
   {
     src: "/videos/herosection_new_part2.mp4",
-    title: "Reel 2",
+    title: "Valley Corridor Reel 2",
   },
   {
     src: "/videos/herosection_new_part3.mp4",
-    title: "Reel 3",
+    title: "Valley Corridor Reel 3",
   },
 ];
 
@@ -30,10 +34,12 @@ export default function VideoHero() {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.load();
+      // Ensure the video strictly starts from frame 0.0s without jumping ahead
+      videoRef.current.currentTime = 0;
       const playPromise = videoRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch(() => {
-          // Autoplay was prevented or interrupted, silence error
+          // Autoplay handled safely
         });
       }
     }
@@ -59,6 +65,11 @@ export default function VideoHero() {
           muted
           playsInline
           onEnded={handleVideoEnded}
+          onLoadedData={() => {
+            if (videoRef.current && currentVideoIndex === 0) {
+              videoRef.current.currentTime = 0;
+            }
+          }}
         />
       </div>
 
@@ -74,7 +85,7 @@ export default function VideoHero() {
             <span>ISO 9001:2015 Certified • Premier Infrastructure Firm</span>
           </div>
 
-          {/* Main Headline (without '& Highway Excellence') */}
+          {/* Main Headline */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight drop-shadow-md">
             Engineering for{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-300 to-amber-400">
@@ -117,7 +128,7 @@ export default function VideoHero() {
       {/* Video Reel Sequence Indicator in bottom-right */}
       <div className="absolute bottom-6 right-6 z-20 hidden sm:flex items-center gap-2 bg-black/60 px-3 py-1.5 rounded-full border border-white/15 text-xs text-slate-300 backdrop-blur-sm">
         <span className="text-[11px] font-mono text-amber-300 font-semibold">
-          Drone Reel {currentVideoIndex + 1}/{videos.length}
+          Reel {currentVideoIndex + 1}/{videos.length}: {videos[currentVideoIndex].title}
         </span>
         <div className="flex items-center gap-1.5 ml-1">
           {videos.map((_, idx) => (
