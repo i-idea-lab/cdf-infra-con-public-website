@@ -10,7 +10,8 @@ import {
   ArrowRight,
   ShieldCheck,
   CheckCircle2,
-  HardHat,
+  Gauge,
+  Building2,
 } from "lucide-react";
 
 const slides = [
@@ -19,40 +20,52 @@ const slides = [
     image: "/assets/Vadodra1.85753e81.jpeg",
     tag: "Bharatmala Pariyojana Flagship Corridor",
     headline: "Vadodara Mumbai Expressway",
-    subheadline: "Independent Authority Engineer Supervision for 8-Lane Access Controlled Corridor",
+    subheadline:
+      "Independent Authority Engineer Supervision for 8-Lane Access Controlled Greenfield Expressway",
     stats: "Km 103.400 to Km 154.600 • Hybrid Annuity Mode (HAM)",
+    length: "51.20 Km Total Supervised Stretch",
+    client: "National Highways Authority of India (NHAI)",
     link: "/projects",
   },
   {
     id: 2,
     image: "/assets/Khed1.597ebadc.jpeg",
-    tag: "National Highway Development Project",
+    tag: "National Highway Development Project (NHDP Phase IV)",
     headline: "Four Laning of Khed - Sinnar NH-50",
-    subheadline: "138 Km Heavy Industrial Freight Corridor Engineering & Supervision",
-    stats: "Design Length 137.95 Km • DBFOT Toll Concession",
+    subheadline:
+      "Heavy industrial freight corridor connecting Pune, Narayangaon, Alephata, Sangamner, and Sinnar with major bypasses.",
+    stats: "Design Length 137.946 Km • DBFOT Toll Concession",
+    length: "137.95 Km (4-Lane)",
+    client: "NHAI / Ministry of Road Transport & Highways",
     link: "/projects",
   },
   {
     id: 3,
     image: "/assets/MahabaleshwarSataraRahimatpur71km1.eba7f8c5.jpeg",
-    tag: "High-Altitude Ghat Engineering",
+    tag: "High-Altitude Western Ghats Corridor",
     headline: "State Highway 140 Mahabaleshwar - Satara",
-    subheadline: "Specialized Pavement Design, White Topping & Slope Stabilization",
+    subheadline:
+      "Specialized pavement engineering, white topping overlays, retaining breast walls, and deep-cut ghat drainage.",
     stats: "71 Km Scenic & Commercial Arterial Corridor",
+    length: "71.00 Km",
+    client: "Maharashtra State Road Improvement Project (MRIP)",
     link: "/projects",
   },
   {
     id: 4,
     image: "/assets/MalharpethUmbrajMasurMayani1.359e3842.jpeg",
-    tag: "State Road Improvement Project (MRIP)",
+    tag: "MRIP Hybrid Annuity Mode (HAM)",
     headline: "Malharpeth - Pandharpur SH-143",
-    subheadline: "98.42 Km High-Capacity Highway Upgrade on Hybrid Annuity Mode",
-    stats: "Western Maharashtra Pilgrimage & Freight Route",
+    subheadline:
+      "High-capacity 2-lane paved shoulder upgrade linking Western Maharashtra freight and pilgrimage centers.",
+    stats: "Km 55/000 to Km 153/420 on Hybrid Annuity Mode",
+    length: "98.42 Km",
+    client: "PWD Maharashtra / MRIP",
     link: "/projects",
   },
 ];
 
-export default function HeroSlider() {
+export default function FlagshipProjectsSlider() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -71,7 +84,10 @@ export default function HeroSlider() {
   };
 
   return (
-    <section className="relative w-full h-[620px] sm:h-[680px] lg:h-[740px] bg-brand-dark overflow-hidden select-none">
+    <section
+      id="flagship-projects"
+      className="relative w-full h-[580px] sm:h-[640px] lg:h-[700px] bg-brand-dark overflow-hidden select-none border-t border-white/10"
+    >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={current}
@@ -96,7 +112,7 @@ export default function HeroSlider() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Hero Content Container */}
+      {/* Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
         <div className="max-w-3xl space-y-5">
           {/* Tag Pill */}
@@ -105,22 +121,22 @@ export default function HeroSlider() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-wider uppercase backdrop-blur-md"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-wider uppercase backdrop-blur-md"
           >
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>{slides[current].tag}</span>
           </motion.div>
 
           {/* Main Title */}
-          <motion.h1
+          <motion.h2
             key={`title-${current}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight"
+            className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight"
           >
             {slides[current].headline}
-          </motion.h1>
+          </motion.h2>
 
           {/* Subtitle */}
           <motion.p
@@ -128,21 +144,27 @@ export default function HeroSlider() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-base sm:text-lg md:text-xl text-slate-200 font-light leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-slate-200 font-light leading-relaxed"
           >
             {slides[current].subheadline}
           </motion.p>
 
-          {/* Project Details Badge */}
+          {/* Meta specs row */}
           <motion.div
-            key={`stats-${current}`}
+            key={`meta-${current}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex items-center gap-2 text-xs sm:text-sm text-amber-300 font-mono bg-black/40 px-3.5 py-2 rounded-lg border border-white/10 w-fit backdrop-blur-sm"
+            className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-300 font-mono"
           >
-            <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0" />
-            <span>{slides[current].stats}</span>
+            <div className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm text-amber-300">
+              <Gauge className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+              <span>{slides[current].length}</span>
+            </div>
+            <div className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm">
+              <Building2 className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+              <span>{slides[current].client}</span>
+            </div>
           </motion.div>
 
           {/* CTAs */}
@@ -155,17 +177,10 @@ export default function HeroSlider() {
           >
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-amber hover:from-amber-400 hover:to-amber-600 text-brand-dark font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg hover:shadow-amber-500/30 transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-amber hover:from-amber-400 hover:to-amber-600 text-brand-dark font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-lg transition-all"
             >
-              <span>Explore Projects Portfolio</span>
+              <span>Explore All 100+ Projects</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/20 backdrop-blur-md transition-all"
-            >
-              <span>Consulting Capabilities</span>
             </Link>
           </motion.div>
         </div>
