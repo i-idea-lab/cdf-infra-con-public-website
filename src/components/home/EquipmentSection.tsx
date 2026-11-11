@@ -14,14 +14,14 @@ export default function EquipmentSection() {
     <section className="py-20 bg-white border-t border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
+        <div className="text-center max-w-4xl mx-auto space-y-3">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
             Advanced Technology
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight whitespace-normal sm:whitespace-nowrap">
             High-Tech Fleet & Testing Equipment
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
             In-house specialized testing instruments ensuring millimeter-level accuracy for
             pavement structural integrity, international roughness (IRI), and safety auditing.
           </p>

@@ -6,14 +6,14 @@ export default function TendersSection() {
   return (
     <section className="py-16 bg-slate-900 text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div className="text-center max-w-2xl mx-auto space-y-2">
+        <div className="text-center max-w-4xl mx-auto space-y-2">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
             Government Procurement & Tender Portals
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight whitespace-normal sm:whitespace-nowrap">
             Central & State Highway Portals Quick Access
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400">
+          <p className="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto">
             Direct gateways to official national and state infrastructure procurement authorities.
           </p>
         </div>
