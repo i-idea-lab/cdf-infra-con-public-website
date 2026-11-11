@@ -3,27 +3,27 @@ import { Quote, Star } from "lucide-react";
 const testimonials = [
   {
     name: "Gaurav Malewar",
-    role: "Project Director / Infrastructure Associate",
+    role: "SQME",
     comment:
-      "CDF Infra Con demonstrates exceptional diligence as an Authority Engineer. Their on-site engineers maintain rigorous adherence to MoRTH specifications and ensure that contractor milestones are achieved without quality shortcuts.",
+      "Working with M/s CDF Infra has been a professionally enriching experience, showcasing their unwavering commitment to quality and engineering excellence.",
   },
   {
     name: "Krushandev Mahadkar",
-    role: "Senior Resident Highway Engineer",
+    role: "SQME",
     comment:
-      "Their techno-legal dispute resolution and arbitration advisory under Chairman C.D. Fakir is second to none in western India. The depth of engineering and contract acumen brings immediate clarity to complex delay claims.",
+      "M/s CDF Infra’s professionalism and commitment to engineering excellence are evident in every phase of the project.",
   },
   {
     name: "Digvijay F. Patankar",
-    role: "Concessionaire Liaison Officer",
+    role: "Senior Pavement Specialist",
     comment:
-      "The deployment of automated survey fleets—particularly their Network Survey Vehicle (NSV) and Falling Weight Deflectometer—saved weeks during our pre-monsoon pavement benchmarking.",
+      "Working with M/s CDF Infra as a Senior Pavement Specialist has been a rewarding experience, marked by technical excellence and strong project execution. Their commitment to quality, coordination, and timely decisions ensures smooth and impactful infrastructure development.",
   },
   {
     name: "Dilip Palve",
-    role: "Highway Quality Consultant",
+    role: "Resident Engineer",
     comment:
-      "A benchmark organization in infrastructure consultancy. The leadership team leads from the front with site inspections, rigorous structural proof checking, and total transparency.",
+      "A benchmark organization in infrastructure consultancy. The leadership team leads from the front with rigorous on-site supervision, structural proof checking, and total commitment to quality.",
   },
 ];
 
