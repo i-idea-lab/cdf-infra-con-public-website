@@ -23,20 +23,22 @@ export default function AboutOverview() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <span className="text-xs uppercase tracking-wider text-amber-300 font-semibold">
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent" />
+              
+              {/* Top-left tag badge to avoid any collision with the bottom-right card */}
+              <div className="absolute top-5 left-5 max-w-xs bg-brand-dark/80 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15 text-white shadow-lg">
+                <span className="text-[10px] uppercase tracking-wider text-brand-gold font-bold block">
                   Engineering Precision
                 </span>
-                <p className="text-base font-bold sm:text-lg">
-                  Over Two Decades of Pioneering Highway Engineering in India
+                <p className="text-xs sm:text-sm font-bold text-white mt-0.5 leading-snug">
+                  Over Two Decades of Highway Excellence in India
                 </p>
               </div>
             </div>
 
             {/* Overlapping secondary badge */}
-            <div className="absolute -bottom-6 -right-4 sm:right-6 bg-brand-navy text-white p-5 rounded-xl shadow-xl border border-white/10 hidden sm:flex items-center gap-4 max-w-xs">
-              <div className="w-12 h-12 rounded-lg bg-brand-gold/20 flex items-center justify-center shrink-0">
+            <div className="absolute -bottom-6 -right-2 sm:right-6 bg-brand-navy text-white p-5 rounded-2xl shadow-2xl border border-white/10 hidden sm:flex items-center gap-4 max-w-xs z-10">
+              <div className="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center shrink-0">
                 <Award className="w-7 h-7 text-brand-gold" />
               </div>
               <div>
