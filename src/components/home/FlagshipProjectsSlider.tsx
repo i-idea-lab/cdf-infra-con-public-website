@@ -88,101 +88,84 @@ export default function FlagshipProjectsSlider() {
       id="flagship-projects"
       className="relative w-full h-[580px] sm:h-[640px] lg:h-[700px] bg-brand-dark overflow-hidden select-none border-t border-white/10"
     >
-      <AnimatePresence initial={false} mode="wait">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute inset-0"
+      {/* Stacked background images for instantaneous, flicker-free crossfading */}
+      {slides.map((slide, idx) => (
+        <div
+          key={slide.id}
+          className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+            idx === current
+              ? "opacity-100 z-10 scale-100"
+              : "opacity-0 z-0 pointer-events-none scale-105"
+          }`}
         >
           {/* Background Project Image */}
           <Image
-            src={slides[current].image}
-            alt={slides[current].headline}
+            src={slide.image}
+            alt={slide.headline}
             fill
             priority
+            sizes="100vw"
             className="object-cover"
           />
 
           {/* Cinematic Gradient Overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/75 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/30" />
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      ))}
 
       {/* Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
         <div className="max-w-3xl space-y-5">
-          {/* Tag Pill */}
-          <motion.div
-            key={`tag-${current}`}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-wider uppercase backdrop-blur-md"
-          >
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span>{slides[current].tag}</span>
-          </motion.div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="space-y-4"
+            >
+              {/* Tag Pill */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-wider uppercase backdrop-blur-md">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>{slides[current].tag}</span>
+              </div>
 
-          {/* Main Title */}
-          <motion.h2
-            key={`title-${current}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight"
-          >
-            {slides[current].headline}
-          </motion.h2>
+              {/* Main Title */}
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                {slides[current].headline}
+              </h2>
 
-          {/* Subtitle */}
-          <motion.p
-            key={`sub-${current}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm sm:text-base md:text-lg text-slate-200 font-light leading-relaxed"
-          >
-            {slides[current].subheadline}
-          </motion.p>
+              {/* Subtitle */}
+              <p className="text-sm sm:text-base md:text-lg text-slate-200 font-light leading-relaxed">
+                {slides[current].subheadline}
+              </p>
 
-          {/* Meta specs row */}
-          <motion.div
-            key={`meta-${current}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-300 font-mono"
-          >
-            <div className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm text-amber-300">
-              <Gauge className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-              <span>{slides[current].length}</span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm">
-              <Building2 className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-              <span>{slides[current].client}</span>
-            </div>
-          </motion.div>
+              {/* Meta specs row */}
+              <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-slate-300 font-mono">
+                <div className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm text-amber-300">
+                  <Gauge className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                  <span>{slides[current].length}</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-black/40 px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-sm">
+                  <Building2 className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                  <span>{slides[current].client}</span>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
 
-          {/* CTAs */}
-          <motion.div
-            key={`cta-${current}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="pt-2 flex flex-wrap items-center gap-4"
-          >
+          {/* CTA stays steady and responsive */}
+          <div className="pt-2 flex flex-wrap items-center gap-4">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-amber hover:from-amber-400 hover:to-amber-600 text-brand-dark font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-lg transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-amber hover:from-amber-400 hover:to-amber-600 text-brand-dark font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Explore All 100+ Projects</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
 
