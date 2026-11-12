@@ -161,7 +161,7 @@ export default function FlagshipProjectsSlider() {
               href="/projects"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-amber hover:from-amber-400 hover:to-amber-600 text-brand-dark font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              <span>Explore All 100+ Projects</span>
+              <span>Explore All Projects</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
