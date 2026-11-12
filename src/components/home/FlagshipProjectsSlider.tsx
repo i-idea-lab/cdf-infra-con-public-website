@@ -108,15 +108,14 @@ export default function FlagshipProjectsSlider() {
             className="object-cover"
           />
 
-          {/* Cinematic Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/75 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-black/30" />
+          {/* Removed blue gradient overlay - pure authentic image with subtle bottom vignette for pagination visibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
         </div>
       ))}
 
-      {/* Content Container */}
+      {/* Content Container - Sleek frosted glass panel for perfect text legibility without tinting the photo */}
       <div className="relative z-20 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-        <div className="max-w-3xl space-y-5">
+        <div className="max-w-2xl bg-black/50 backdrop-blur-md p-6 sm:p-8 lg:p-10 rounded-3xl border border-white/15 shadow-2xl space-y-5">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
