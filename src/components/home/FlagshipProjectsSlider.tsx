@@ -77,11 +77,11 @@ export default function FlagshipProjectsSlider() {
   return (
     <section
       id="flagship-projects"
-      className="bg-brand-dark py-8 sm:py-12 relative overflow-hidden"
+      className="bg-white py-10 sm:py-14 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Contained Cinema Showcase Frame */}
-        <div className="relative w-full h-[520px] sm:h-[580px] lg:h-[620px] rounded-3xl overflow-hidden shadow-2xl border border-white/15 select-none bg-slate-950">
+        <div className="relative w-full h-[520px] sm:h-[580px] lg:h-[620px] rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/20 border border-slate-200 select-none bg-slate-950">
           {/* Stacked background images for instantaneous, flicker-free crossfading */}
           {slides.map((slide, idx) => (
             <div
