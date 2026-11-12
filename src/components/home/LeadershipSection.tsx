@@ -103,7 +103,7 @@ export default function LeadershipSection() {
                     className="object-cover"
                   />
                 </div>
-                <h4 className="text-sm font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
+                <h4 className="text-sm font-bold text-brand-navy">
                   {adv.name}
                 </h4>
                 <p className="text-[11px] font-medium text-amber-600 mt-0.5">
