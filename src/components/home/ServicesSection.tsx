@@ -144,7 +144,7 @@ export default function ServicesSection() {
               href="/services"
               className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-gold hover:text-amber-300 transition-colors pl-2"
             >
-              <span>All Services</span>
+              <span>View More Details</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
