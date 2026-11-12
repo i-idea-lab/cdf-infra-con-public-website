@@ -114,10 +114,10 @@ export default function FeaturedProjects() {
 
                 <div className="pt-2">
                   <Link
-                    href="/projects"
+                    href={`/projects/${project.id}`}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-navy hover:text-amber-600 uppercase tracking-wider transition-colors"
                   >
-                    <span>View Specifications</span>
+                    <span>View Project Details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
