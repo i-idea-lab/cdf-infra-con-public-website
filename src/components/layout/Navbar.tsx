@@ -35,7 +35,7 @@ const navLinks = [
     ],
   },
   { name: "Equipment", href: "/equipment" },
-  { name: "Careers", href: "/careers" },
+  { name: "Our Clients", href: "/clients" },
   { name: "Contact", href: "/contact" },
 ];
 

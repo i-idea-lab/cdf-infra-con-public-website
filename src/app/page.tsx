@@ -7,7 +7,7 @@ import FeaturedProjects from "@/components/home/FeaturedProjects";
 import EquipmentSection from "@/components/home/EquipmentSection";
 import LeadershipSection from "@/components/home/LeadershipSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import ClientsSection from "@/components/home/ClientsSection";
+import ClientLogosSection from "@/components/home/ClientLogosSection";
 
 export default function HomePage() {
   return (
@@ -39,8 +39,8 @@ export default function HomePage() {
       {/* 9th Viewport: Client Testimonials */}
       <TestimonialsSection />
 
-      {/* 10th Viewport: Our Esteemed Clients & Public Sector Authorities */}
-      <ClientsSection />
+      {/* 10th Viewport: Our Clients (Logos Showcase) */}
+      <ClientLogosSection />
     </>
   );
 }

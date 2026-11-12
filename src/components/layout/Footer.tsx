@@ -239,6 +239,23 @@ export default function Footer() {
                   <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </li>
+              <li className="pt-3 border-t border-white/10">
+                <Link
+                  href="/careers"
+                  className="text-amber-400 hover:text-amber-300 font-semibold inline-flex items-center gap-1 transition-colors"
+                >
+                  Careers & Job Openings
+                  <ArrowUpRight className="w-3 h-3" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/clients"
+                  className="hover:text-brand-gold transition-colors inline-flex items-center gap-1"
+                >
+                  Our Clients & Authorities
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -249,7 +266,19 @@ export default function Footer() {
             © {new Date().getFullYear()} CDF Infracon Private Limited. All Rights Reserved.
           </p>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <Link
+              href="/careers"
+              className="text-amber-400 hover:text-amber-300 font-semibold transition-colors"
+            >
+              Careers
+            </Link>
+            <Link
+              href="/clients"
+              className="hover:text-white transition-colors"
+            >
+              Our Clients
+            </Link>
             <a
               href={companyInfo.socials.linkedin}
               target="_blank"
