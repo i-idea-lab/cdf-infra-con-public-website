@@ -33,14 +33,14 @@ export default function HomePage() {
       {/* 7th Viewport: High-Tech Survey Fleets & Equipment */}
       <EquipmentSection />
 
-      {/* 8th Viewport: Executive Leadership & Advisors */}
+      {/* 8th Viewport: Our Clients (Logos Showcase) */}
+      <ClientLogosSection />
+
+      {/* 9th Viewport: Executive Leadership & Advisors (Executive Direction) */}
       <LeadershipSection />
 
-      {/* 9th Viewport: Client Testimonials */}
+      {/* 10th Viewport: Client Testimonials */}
       <TestimonialsSection />
-
-      {/* 10th Viewport: Our Clients (Logos Showcase) */}
-      <ClientLogosSection />
     </>
   );
 }
