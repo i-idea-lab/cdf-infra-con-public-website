@@ -172,55 +172,6 @@ export default function EquipmentPage() {
               </div>
             </div>
           </div>
-
-          {/* Quick comparison grid of all 5 */}
-          <div className="pt-6 space-y-6">
-            <h3 className="text-xl font-bold text-slate-900">
-              Complete Highway Survey & Testing Capabilities
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {equipmentData.map((item) => (
-                <div
-                  key={item.id}
-                  onClick={() => {
-                    handleSelect(item);
-                    window.scrollTo({ top: 320, behavior: "smooth" });
-                  }}
-                  className={`p-5 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between space-y-3 ${
-                    selectedEquipment.id === item.id
-                      ? "bg-brand-navy text-white border-brand-gold shadow-lg"
-                      : "bg-white text-slate-800 border-slate-200 hover:border-amber-400"
-                  }`}
-                >
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      <span
-                        className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
-                          selectedEquipment.id === item.id
-                            ? "bg-amber-400 text-brand-dark"
-                            : "bg-slate-100 text-amber-700"
-                        }`}
-                      >
-                        {item.acronym}
-                      </span>
-                    </div>
-                    <h4 className="text-sm font-bold leading-snug">{item.name}</h4>
-                    <p
-                      className={`text-[11px] leading-tight ${
-                        selectedEquipment.id === item.id ? "text-slate-300" : "text-slate-500"
-                      }`}
-                    >
-                      {item.category}
-                    </p>
-                  </div>
-                  <span className="text-[11px] font-semibold text-amber-500 flex items-center gap-1 pt-1">
-                    <span>Inspect Unit</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
     </div>
