@@ -34,8 +34,8 @@ const navLinks = [
       { name: "Technical Arbitration", href: "/services/Arbitration" },
     ],
   },
-  { name: "Equipment", href: "/equipment" },
   { name: "Our Clients", href: "/clients" },
+  { name: "Equipment", href: "/equipment" },
   { name: "Contact", href: "/contact" },
 ];
 
