@@ -6,8 +6,8 @@ import ServicesSection from "@/components/home/ServicesSection";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import EquipmentSection from "@/components/home/EquipmentSection";
 import LeadershipSection from "@/components/home/LeadershipSection";
-import TendersSection from "@/components/home/TendersSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import ClientsSection from "@/components/home/ClientsSection";
 
 export default function HomePage() {
   return (
@@ -36,11 +36,11 @@ export default function HomePage() {
       {/* 8th Viewport: Executive Leadership & Advisors */}
       <LeadershipSection />
 
-      {/* 9th Viewport: Government Tender Portals */}
-      <TendersSection />
-
-      {/* 10th Viewport: Client Testimonials */}
+      {/* 9th Viewport: Client Testimonials */}
       <TestimonialsSection />
+
+      {/* 10th Viewport: Our Esteemed Clients & Public Sector Authorities */}
+      <ClientsSection />
     </>
   );
 }
