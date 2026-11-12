@@ -34,7 +34,7 @@ export default function ServicesSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
-              Our Capabilities
+              Our Services
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
               Comprehensive Engineering Solutions

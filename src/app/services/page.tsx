@@ -13,7 +13,7 @@ import {
 import { servicesData } from "@/data/services";
 
 export const metadata = {
-  title: "Services & Capabilities | CDF Infra Con Pvt. Ltd.",
+  title: "Our Services | CDF Infra Con Pvt. Ltd.",
   description:
     "Explore our 7 core infrastructure consulting verticals: Authority Engineer, DPR Feasibility, O&M Supervision, Road Safety Audits, PMC, Design Engineering, and Arbitration.",
 };
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       <section className="bg-brand-dark text-white py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
-            Consulting Disciplines
+            Our Services
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
             Building Infrastructure, Connecting Communities
