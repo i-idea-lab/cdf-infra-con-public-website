@@ -192,7 +192,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li>
                 <Link
-                  href="/projects"
+                  href="/projects/vadodara-mumbai-expressway-pkg16"
                   className="hover:text-brand-gold transition-colors block"
                 >
                   Vadodara Mumbai Expressway PKG-16
@@ -200,7 +200,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/projects"
+                  href="/projects/khed-sinnar-nh50"
                   className="hover:text-brand-gold transition-colors block"
                 >
                   NH-50 Khed - Sinnar 4-Laning (138 Km)
@@ -208,7 +208,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/projects"
+                  href="/projects/fagne-gujarat-border-nh6"
                   className="hover:text-brand-gold transition-colors block"
                 >
                   NH-6 Fagne to Gujarat Border (141 Km)
@@ -216,15 +216,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/projects"
+                  href="/projects/mahabaleshwar-satara-sh140"
                   className="hover:text-brand-gold transition-colors block"
                 >
-                  Malshej Ghat White Topping (WT)
+                  SH-140 Mahabaleshwar - Satara (71 Km)
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/projects"
+                  href="/projects/malharpeth-pandharpur-sh143"
                   className="hover:text-brand-gold transition-colors block"
                 >
                   SH-143 Malharpeth - Pandharpur (98 Km)
