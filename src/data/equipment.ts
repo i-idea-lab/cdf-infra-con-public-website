@@ -2,6 +2,7 @@ export interface EquipmentItem {
   id: string;
   name: string;
   acronym: string;
+  category: string;
   tagline: string;
   description: string;
   images: string[];
@@ -14,6 +15,7 @@ export const equipmentData: EquipmentItem[] = [
     id: "atcc",
     name: "Automatic Traffic Counter & Classifier",
     acronym: "ATCC",
+    category: "Traffic Census & Classification",
     tagline: "Automated high-speed traffic census, vehicle categorization & axle count monitoring",
     description:
       "An Automatic Traffic Counter and Classifier (ATCC) is an advanced sensor-based system engineered to monitor and analyze vehicle traffic without manual human intervention. Utilizing piezometric sensors, inductive loops, and optical infrared detectors, it captures vehicle counts, vehicle categorization (per IRC classification), axle configuration, and directional speed 24/7.",
@@ -39,6 +41,7 @@ export const equipmentData: EquipmentItem[] = [
     id: "nsv",
     name: "Network Survey Vehicle",
     acronym: "NSV",
+    category: "Laser Profilometry & Pavement Condition",
     tagline: "Laser profilometer, 360° right-of-way imagery & high-definition surface roughness measurement",
     description:
       "A Network Survey Vehicle (NSV) is a high-tech mobile measurement platform outfitted with high-resolution laser profilometers, GPS/INS georeferencing, optical cameras, and crack measurement software. It collects continuous millimeter-accurate data on pavement condition while driving at highway traffic speeds.",
@@ -63,6 +66,7 @@ export const equipmentData: EquipmentItem[] = [
     id: "fwd",
     name: "Falling Weight Deflectometer",
     acronym: "FWD",
+    category: "Non-Destructive Testing (NDT)",
     tagline: "Non-destructive dynamic pavement deflection & subgrade structural capacity evaluation",
     description:
       "The Falling Weight Deflectometer (FWD) is an essential non-destructive testing instrument used to evaluate the structural integrity and load-bearing capacity of asphalt and concrete pavements. It simulates the dynamic impact of a heavy commercial vehicle wheel load and measures deflection across geophone sensor arrays.",
@@ -87,6 +91,7 @@ export const equipmentData: EquipmentItem[] = [
     id: "mbiu",
     name: "Mobile Bridge Inspection Unit",
     acronym: "MBIU",
+    category: "Bridge & Structural Diagnostics",
     tagline: "Articulated under-bridge aerial platform for non-destructive structural deck & pier audits",
     description:
       "A Mobile Bridge Inspection Unit (MBIU) is a vehicle-mounted articulating hydraulic platform designed to deploy inspectors safely below bridge superstructures, pier caps, bearings, and soffits without disrupting vehicular traffic above or needing ground scaffolding.",
@@ -112,6 +117,7 @@ export const equipmentData: EquipmentItem[] = [
     id: "retro-reflectometer",
     name: "Retro-Reflectometer",
     acronym: "RRT",
+    category: "Road Safety & Photometrics",
     tagline: "Precision optical retroreflectivity testing for highway signboards & thermoplastic markings",
     description:
       "A Retro-Reflectometer is a portable precision optical instrument that measures the retroreflective performance (RA / RL) of road traffic signs, hazard delineators, and thermoplastic pavement markings, ensuring night-time visibility and safety for motorists.",

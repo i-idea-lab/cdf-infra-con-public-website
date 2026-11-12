@@ -66,6 +66,9 @@ export default function EquipmentSection() {
             {/* Details Box */}
             <div className="lg:col-span-6 space-y-6">
               <div className="space-y-2">
+                <span className="inline-block text-xs font-bold uppercase tracking-wider text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+                  {current.category}
+                </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
                   {current.name}
                 </h3>
