@@ -132,7 +132,7 @@ export default function FeaturedProjects() {
             href="/projects"
             className="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white font-bold text-xs tracking-wider uppercase px-8 py-4 rounded-xl shadow-lg transition-all"
           >
-            <span>View Complete Project Directory (100+ Works)</span>
+            <span>View All Projects</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
