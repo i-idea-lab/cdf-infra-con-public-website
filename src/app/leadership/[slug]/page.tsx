@@ -53,7 +53,7 @@ export default function LeadershipDetailPage({ params }: PageProps) {
               Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
-            <Link href="/about" className="hover:text-brand-gold transition-colors">
+            <Link href="/about-us" className="hover:text-brand-gold transition-colors">
               Leadership
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600" />

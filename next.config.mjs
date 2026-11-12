@@ -8,7 +8,12 @@ const nextConfig = {
     return [
       {
         source: '/pages/about',
-        destination: '/about',
+        destination: '/about-us',
+        permanent: true,
+      },
+      {
+        source: '/about',
+        destination: '/about-us',
         permanent: true,
       },
       {

@@ -19,7 +19,7 @@ import { companyInfo } from "@/data/company";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "About Us", href: "/about-us" },
   { name: "Projects", href: "/projects" },
   {
     name: "Services",

@@ -86,7 +86,7 @@ export default function AboutOverview() {
 
             <div className="pt-4 flex items-center gap-4">
               <Link
-                href="/about"
+                href="/about-us"
                 className="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white font-semibold text-xs tracking-wider uppercase px-6 py-3.5 rounded-xl shadow-md transition-all"
               >
                 <span>Read Full Corporate Profile</span>

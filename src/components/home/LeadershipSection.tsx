@@ -89,7 +89,7 @@ export default function LeadershipSection() {
               </p>
             </div>
             <Link
-              href="/about"
+              href="/about-us"
               className="text-xs font-bold text-brand-navy hover:text-amber-600 transition-colors uppercase tracking-wider inline-flex items-center gap-1"
             >
               <span>Learn More About Our Team</span>
