@@ -51,6 +51,41 @@ const nextConfig = {
         destination: '/leadership/advisory-:id',
         permanent: true,
       },
+      {
+        source: '/leadership/11',
+        destination: '/leadership/c-d-fakir',
+        permanent: true,
+      },
+      {
+        source: '/leadership/12',
+        destination: '/leadership/amer-c-fakir',
+        permanent: true,
+      },
+      {
+        source: '/leadership/13',
+        destination: '/leadership/amman-c-fakir',
+        permanent: true,
+      },
+      {
+        source: '/leadership/advisory-1',
+        destination: '/leadership/dilip-g-palve',
+        permanent: true,
+      },
+      {
+        source: '/leadership/advisory-2',
+        destination: '/leadership/m-v-patil',
+        permanent: true,
+      },
+      {
+        source: '/leadership/advisory-3',
+        destination: '/leadership/l-s-joshi',
+        permanent: true,
+      },
+      {
+        source: '/leadership/advisory-4',
+        destination: '/leadership/v-b-bhale',
+        permanent: true,
+      },
     ];
   },
 };

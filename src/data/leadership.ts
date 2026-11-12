@@ -14,7 +14,7 @@ export interface LeaderMember {
 
 export const leadershipData: LeaderMember[] = [
   {
-    slug: "11",
+    slug: "c-d-fakir",
     idNumber: "11",
     name: "Mr. C. D. Fakir",
     role: "The Chairman",
@@ -48,7 +48,7 @@ export const leadershipData: LeaderMember[] = [
     isExecutive: true,
   },
   {
-    slug: "12",
+    slug: "amer-c-fakir",
     idNumber: "12",
     name: "Mr. Amer C. Fakir",
     role: "Managing Director",
@@ -70,7 +70,7 @@ export const leadershipData: LeaderMember[] = [
     isExecutive: true,
   },
   {
-    slug: "13",
+    slug: "amman-c-fakir",
     idNumber: "13",
     name: "Mr. Amman C. Fakir",
     role: "Director",
@@ -91,7 +91,7 @@ export const leadershipData: LeaderMember[] = [
     isExecutive: true,
   },
   {
-    slug: "advisory-1",
+    slug: "dilip-g-palve",
     idNumber: "1",
     name: "Mr. Dilip G. Palve",
     role: "Senior Technical Advisor",
@@ -111,7 +111,7 @@ export const leadershipData: LeaderMember[] = [
     isExecutive: false,
   },
   {
-    slug: "advisory-2",
+    slug: "m-v-patil",
     idNumber: "2",
     name: "Mr. M. V. Patil",
     role: "Senior Technical Advisor",
@@ -130,7 +130,7 @@ export const leadershipData: LeaderMember[] = [
     isExecutive: false,
   },
   {
-    slug: "advisory-3",
+    slug: "l-s-joshi",
     idNumber: "3",
     name: "Mr. L. S. Joshi",
     role: "Senior Technical Advisor",
@@ -149,7 +149,7 @@ export const leadershipData: LeaderMember[] = [
     isExecutive: false,
   },
   {
-    slug: "advisory-4",
+    slug: "v-b-bhale",
     idNumber: "4",
     name: "Mr. V. B. Bhale",
     role: "Senior Technical Advisor",
