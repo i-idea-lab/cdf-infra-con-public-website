@@ -22,10 +22,10 @@ export const companyInfo = {
   },
   hours: "Monday - Saturday: 10:00 AM to 7:00 PM (Sunday: Closed)",
   stats: [
-    { label: "Successful Highway Projects", value: "100+", suffix: "" },
-    { label: "Years of Engineering Excellence", value: "20+", suffix: "" },
-    { label: "Kilometers Supervised", value: "5,000+", suffix: "Km" },
-    { label: "High-Tech Testing Fleets", value: "5+", suffix: "Units" },
+    { label: "Glorious Years", value: "10+", suffix: "" },
+    { label: "Completed Projects", value: "52+", suffix: "" },
+    { label: "Team Members", value: "110+", suffix: "" },
+    { label: "Offices Nationwide", value: "12+", suffix: "" },
   ],
   socials: {
     linkedin: "https://www.linkedin.com/company/35883383/",
