@@ -42,7 +42,7 @@ export default function AboutOverview() {
                 <Award className="w-7 h-7 text-brand-gold" />
               </div>
               <div>
-                <div className="text-xl font-bold text-white">100+ Key Projects</div>
+                <div className="text-xl font-bold text-white">50+ Key Projects</div>
                 <div className="text-xs text-slate-300">
                   Delivered with Zero Quality Compromise
                 </div>
