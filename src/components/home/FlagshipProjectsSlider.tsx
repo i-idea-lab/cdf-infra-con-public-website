@@ -157,52 +157,70 @@ export default function FlagshipProjectsSlider() {
                 </div>
 
                 {/* Right Side CTA and Controls */}
-                <div className="flex items-center gap-4 shrink-0 pt-2 lg:pt-0">
+                <div className="flex flex-wrap items-center justify-between sm:justify-end gap-3 shrink-0 pt-2 lg:pt-0 w-full sm:w-auto">
                   <Link
                     href="/projects"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-amber hover:from-amber-400 hover:to-amber-600 text-brand-dark font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-amber hover:from-amber-400 hover:to-amber-600 text-brand-dark font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-xl shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <span>Explore All Projects</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
 
-                  {/* Slide Indicators inside control area */}
-                  <div className="flex items-center space-x-1.5 pl-2">
-                    {slides.map((s, idx) => (
-                      <button
-                        key={s.id}
-                        onClick={() => setCurrent(idx)}
-                        className="py-2 focus:outline-none cursor-pointer"
-                        aria-label={`Go to slide ${idx + 1}`}
-                      >
-                        <div
-                          className={`h-1.5 rounded-full transition-all duration-300 ${
-                            idx === current
-                              ? "w-8 bg-brand-gold"
-                              : "w-2 bg-white/40 hover:bg-white/70"
-                          }`}
-                        />
-                      </button>
-                    ))}
+                  {/* Slide Indicators & Mobile Nav */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={prevSlide}
+                      className="sm:hidden w-8 h-8 rounded-full bg-black/60 text-white border border-white/20 flex items-center justify-center cursor-pointer active:scale-95"
+                      aria-label="Previous Slide"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                    </button>
+
+                    <div className="flex items-center space-x-1.5 px-1">
+                      {slides.map((s, idx) => (
+                        <button
+                          key={s.id}
+                          onClick={() => setCurrent(idx)}
+                          className="py-2 focus:outline-none cursor-pointer"
+                          aria-label={`Go to slide ${idx + 1}`}
+                        >
+                          <div
+                            className={`h-1.5 rounded-full transition-all duration-300 ${
+                              idx === current
+                                ? "w-7 sm:w-8 bg-brand-gold"
+                                : "w-2 bg-white/40 hover:bg-white/70"
+                            }`}
+                          />
+                        </button>
+                      ))}
+                    </div>
+
+                    <button
+                      onClick={nextSlide}
+                      className="sm:hidden w-8 h-8 rounded-full bg-black/60 text-white border border-white/20 flex items-center justify-center cursor-pointer active:scale-95"
+                      aria-label="Next Slide"
+                    >
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Left Arrow Button */}
+          {/* Left Arrow Button (Desktop / Tablet) */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-black/50 hover:bg-brand-gold hover:text-brand-dark text-white border border-white/15 backdrop-blur-md flex items-center justify-center transition-all shadow-lg cursor-pointer active:scale-95"
+            className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-black/50 hover:bg-brand-gold hover:text-brand-dark text-white border border-white/15 backdrop-blur-md items-center justify-center transition-all shadow-lg cursor-pointer active:scale-95"
             aria-label="Previous Slide"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          {/* Right Arrow Button */}
+          {/* Right Arrow Button (Desktop / Tablet) */}
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-black/50 hover:bg-brand-gold hover:text-brand-dark text-white border border-white/15 backdrop-blur-md flex items-center justify-center transition-all shadow-lg cursor-pointer active:scale-95"
+            className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-black/50 hover:bg-brand-gold hover:text-brand-dark text-white border border-white/15 backdrop-blur-md items-center justify-center transition-all shadow-lg cursor-pointer active:scale-95"
             aria-label="Next Slide"
           >
             <ChevronRight className="w-5 h-5" />

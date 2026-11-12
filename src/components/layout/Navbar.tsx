@@ -225,7 +225,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 px-4 pt-3 pb-6 shadow-2xl animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 px-4 pt-3 pb-6 shadow-2xl animate-in slide-in-from-top-2 duration-200 max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain">
           <div className="space-y-1">
             {navLinks.map((item) => (
               <div key={item.name}>

@@ -26,8 +26,8 @@ export default function StatsBar() {
               </div>
 
               {/* Numeric Data & Text to the right of the icon */}
-              <div className="text-left">
-                <div className="flex items-baseline gap-1.5">
+              <div className="text-left min-w-0">
+                <div className="flex items-baseline gap-1">
                   <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-none">
                     {stat.value}
                   </span>
@@ -37,7 +37,7 @@ export default function StatsBar() {
                     </span>
                   )}
                 </div>
-                <p className="mt-1.5 text-xs sm:text-sm font-medium text-slate-300 whitespace-nowrap">
+                <p className="mt-1 text-xs sm:text-sm font-medium text-slate-300 leading-tight">
                   {stat.label}
                 </p>
               </div>
